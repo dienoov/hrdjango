@@ -4,7 +4,7 @@ from . import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("auth/", include("django.contrib.auth.urls")),
     path("", views.index, name="dashboard"),
-    path("login/", views.login, name="login"),
     path("employees/", include("employees.urls")),
 ]
